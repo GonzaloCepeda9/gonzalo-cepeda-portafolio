@@ -1,5 +1,5 @@
 import { Box }  from "@mui/material";
-import fondoPC from "../imagenes/FondoGris.jpg";
+import fondoPC from "../imagenes/FondoColor.jpg";
 import ResponsiveAppBar from "../components/ResponsiveAppBar";
 import { makeStyles } from "@mui/styles";
 
