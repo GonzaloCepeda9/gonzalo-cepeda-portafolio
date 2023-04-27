@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme)=> ({
 
   seccionProyectos: {
     boxShadow: `0px 3px 5px -1px ${theme.palette.secondary.light}`,
+    background: `linear-gradient(180deg, ${theme.palette.secondary.dark} 0%, rgba(0,0,0,1) 35%)`,
   },
 
   tituloSeccionProyectos: {
