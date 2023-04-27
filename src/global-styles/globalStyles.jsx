@@ -11,11 +11,10 @@ const globalStyles = makeStyles ((theme) => ({
     fontSize: "1.1rem",
     display: "flex",
     flexDirection: "column",
-    color: "#eaeaea",
+    color: theme.palette.darkMode.color,
     boxShadow: "0px 3px 5px -1px rgba(255, 255, 255, 0.2), 0px 5px 8px 0px rgba(255, 255, 255, 0.14), 0px 1px 14px 0px rgba(255, 255, 255, 0.12)",
     borderRadius: "4px",
-    transition: "boxShadow: 300ms cubicBezier(0.4, 0, 0.2, 1) 0ms", 
-    background: `linear-gradient(180deg, rgba(10,4,4,1) 0%, rgba(0,0,0,1) 35%)`,
+    transition: "boxShadow: 300ms cubicBezier(0.4, 0, 0.2, 1) 0ms",
     [theme.breakpoints.down("sm")]: {
       padding: "1rem .5rem",
       marginTop: "1rem",
@@ -26,7 +25,7 @@ const globalStyles = makeStyles ((theme) => ({
       width: "100%",
       textAlign: "center",
       textTransform: "uppercase",
-      textShadow: "0.05rem 0.05rem 0.1rem #fff",
+      textShadow: `0.05rem 0.05rem 0.1rem ${theme.palette.darkMode.color}`,
     },
 
     subtituloSeccion: {
@@ -62,7 +61,7 @@ const globalStyles = makeStyles ((theme) => ({
       padding: "0 1rem",
       borderRadius: "1rem",
       border: "none",
-      boxShadow: `0 2px .25rem .05rem ${theme.palette.primary.main}`,
+      boxShadow: `0 .0125rem .075rem .025rem ${theme.palette.primary.light}`,
       opacity: "0.8",
       userSelect: "none",
       "&:hover": { opacity: 1 },
@@ -82,11 +81,12 @@ const globalStyles = makeStyles ((theme) => ({
       },
 
         BotonTexto: {
-          color: "#fff",
+          color: theme.palette.darkMode.color,
+          textTransform: "uppercase",
         },
 
         BotonIcono: {
-          color: theme.palette.primary.main,
+          color: theme.palette.primary.light,
           fontSize: "1.2rem",
         },
 

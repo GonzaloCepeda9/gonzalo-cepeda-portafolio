@@ -10,6 +10,7 @@ const useStyles = makeStyles ((theme) => ({
 
   seccionFooter: {
     boxShadow: `0px 3px 5px -1px ${theme.palette.quaternary.light}`,
+    background: `linear-gradient(180deg, ${theme.palette.quaternary.dark} 0%, ${theme.palette.darkMode.background} 35%)`,
     marginBottom: "3rem",
     [theme.breakpoints.down("sm")]: {
       marginBottom: "2rem"
@@ -17,8 +18,7 @@ const useStyles = makeStyles ((theme) => ({
   },
   
   tituloSeccionContacto: {
-    color: "#000",
-    textShadow: "0.03rem 0.03rem 0.2rem #fff",
+    color: theme.palette.quaternary.main,
   },
 
   contenedorContactos: {
@@ -74,7 +74,11 @@ const useStyles = makeStyles ((theme) => ({
       },
 
         iconContacto: {
-          color: "#fff",
+          color: theme.palette.darkMode.color,
+        },
+
+        textContacto: {
+          color: theme.palette.darkMode.color
         },
 
 }))
@@ -119,7 +123,13 @@ function Footer() {
               sx={{fontSize: { xs: "3rem", sm: "4rem", md: "5rem" }}}
             />
           </Link>
-          <Typography sx={{fontFamily: "Acme", fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}}}>WhatsApp</Typography>
+          <Typography
+            className={classes.textContacto}
+            sx={{
+              fontFamily: "Acme",
+              fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}
+            }}
+          >WhatsApp</Typography>
         </Box>
         <Box
           className={classes.contenedorContacto}
@@ -137,7 +147,13 @@ function Footer() {
               sx={{fontSize: { xs: "3rem", sm: "5rem", md: "6rem" }}}
             />
           </Link>
-          <Typography sx={{fontFamily: "Acme", fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}}}>LinkedIn</Typography>
+          <Typography
+            className={classes.textContacto}
+            sx={{
+              fontFamily: "Acme",
+              fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}
+            }}
+          >LinkedIn</Typography>
         </Box>
         <Box
           className={classes.contenedorContacto}
@@ -155,7 +171,13 @@ function Footer() {
               sx={{fontSize: { xs: "3rem", sm: "5rem", md: "6rem" }}}
             />
           </Link>
-          <Typography sx={{fontFamily: "Acme", fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}}}>GitHub</Typography>
+          <Typography
+            className={classes.textContacto}
+            sx={{
+              fontFamily: "Acme",
+              fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}
+            }}
+          >GitHub</Typography>
         </Box>
       </Box>
     </Box>

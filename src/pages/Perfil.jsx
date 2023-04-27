@@ -10,7 +10,8 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles((theme)=> ({
 
   seccionPerfil: {
-    boxShadow: `0px 3px 5px -1px ${theme.palette.primary.main}`,
+    boxShadow: `0px 3px 5px -1px ${theme.palette.primary.light}`,
+    background: `linear-gradient(180deg, ${theme.palette.primary.dark} 0%, ${theme.palette.darkMode.background} 35%)`,
   },
 
   tituloSeccionPerfil: {
@@ -29,8 +30,8 @@ const useStyles = makeStyles((theme)=> ({
     width: "20%",
     minWidth: "200px",
     borderRadius: "50%",
-    backgroundColor: "#000",
-    boxShadow: `0 .2rem .4rem .01rem ${theme.palette.primary.main}`,
+    backgroundColor: theme.palette.darkMode.background,
+    boxShadow: `0 .2rem .4rem .01rem ${theme.palette.primary.light}`,
   },
 
 }))
@@ -65,8 +66,8 @@ function Perfil() {
       </Typography>
       <Box
         className={`${globalClasses.contenedorGeneral} animado`}
-        data-aos="zoom-in"
-        data-aos-duration="1500"
+        // data-aos="zoom-in"
+        // data-aos-duration="1500"
       >
         <img
           className={`${classes.imgPerfil} ${classes.myClass} animacion-img`}
@@ -92,7 +93,7 @@ function Perfil() {
             <Typography
               className={globalClasses.BotonTexto}
               sx={{fontFamily: "Acme"}}
-            >Currículo Vital</Typography>
+            >Descargar CV</Typography>
             <DownloadIcon className={globalClasses.BotonIcono} />
           </Link>
         </Box>
@@ -111,8 +112,8 @@ function Perfil() {
       </Typography>
       <Box
         className={`${globalClasses.contenedorGeneral} ${classes.contenedorGeneralFormacion}`}
-        data-aos="fade-right"
-        data-aos-duration="1000"
+        // data-aos="fade-right"
+        // data-aos-duration="1000"
       >
         <Typography sx={{width: "80%"}}> Comencé mi formación realizando trainings de manera autodidacta, y luego realicé la diplomatura en "Programación Web Full Stack" con React JS en la UTN (Universidad Tecnológica Nacional).</Typography>
         <BasicModal />

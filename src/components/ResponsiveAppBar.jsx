@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#000",
+    backgroundColor: theme.palette.darkMode.background,
     borderRadius: "50%",
     cursor: "pointer",
     opacity: 0.8,
@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   menuIcon: {
-    color: "#e0d2ce",
+    color: theme.palette.darkMode.color,
   },
 
   list: {
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   linkItem: {
-    backgroundColor: "#000",
+    backgroundColor: theme.palette.darkMode.background,
     width: "98%",
     paddingRight: "1rem",
     paddingLeft: "1rem",
@@ -90,45 +90,45 @@ const useStyles = makeStyles((theme) => ({
       transition: "all .5s ease",
     },
     "&:active": { opacity: 0.6 },
-    color: "#fff",
+    color: theme.palette.darkMode.color,
     position: "relative",
     overflow: "hidden",
     transition: "0.1s",
     "&:hover span": {
-        left: "0%",
-        transition: ".5s",
-        borderRadius: "0 .25rem .25rem 0",
+      left: "0%",
+      transition: ".5s",
+      borderRadius: "0 .25rem .25rem 0",
     }
   },
 
-    linkItemPerfil: {
-      boxShadow: `3px 3px 5px ${theme.palette.primary.main}`,
-      "&:hover": {
-        background: `linear-gradient(0deg, rgba(0,0,0,0.9565723750437675) 50%, ${theme.palette.primary.main} 100%)`,
-        transition: "all .25s ease",
-      },
+  linkItemPerfil: {
+    boxShadow: `3px 3px 5px ${theme.palette.primary.main}`,
+    "&:hover": {
+      background: `linear-gradient(0deg, rgba(0,0,0,0.9565723750437675) 50%, ${theme.palette.primary.main} 100%)`,
+      transition: "all .25s ease",
     },
+  },
 
-    linkItemProyectos: {
-      boxShadow: `3px 3px 5px ${theme.palette.secondary.main}`,
-      "&:hover": {
-        background: `linear-gradient(0deg, rgba(0,0,0,0.9565723750437675) 50%, ${theme.palette.secondary.main} 100%)`,
-      },
+  linkItemProyectos: {
+    boxShadow: `3px 3px 5px ${theme.palette.secondary.main}`,
+    "&:hover": {
+      background: `linear-gradient(0deg, rgba(0,0,0,0.9565723750437675) 50%, ${theme.palette.secondary.main} 100%)`,
     },
+  },
 
-    linkItemHabilidades: {
-      boxShadow: `3px 3px 5px ${theme.palette.tertiary.main}`,
-      "&:hover": {
-        background: `linear-gradient(0deg, rgba(0,0,0,0.9565723750437675) 50%, ${theme.palette.tertiary.main} 100%)`,
-      },
+  linkItemHabilidades: {
+    boxShadow: `3px 3px 5px ${theme.palette.tertiary.main}`,
+    "&:hover": {
+      background: `linear-gradient(0deg, rgba(0,0,0,0.9565723750437675) 50%, ${theme.palette.tertiary.main} 100%)`,
     },
+  },
 
-    linkItemContacto: {
-      boxShadow: `3px 3px 5px ${theme.palette.quaternary.main}`,
-      "&:hover": {
-        background: `linear-gradient(0deg, rgba(0,0,0,0.9565723750437675) 50%, ${theme.palette.quaternary.main} 100%)`,
-      },
+  linkItemContacto: {
+    boxShadow: `3px 3px 5px ${theme.palette.quaternary.main}`,
+    "&:hover": {
+      background: `linear-gradient(0deg, rgba(0,0,0,0.9565723750437675) 50%, ${theme.palette.quaternary.main} 100%)`,
     },
+  },
 
   span: {
     position: "absolute",
@@ -139,26 +139,30 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
   },
 
-    spanPerfil: {
-      background: `linear-gradient(90deg, transparent, ${theme.palette.primary.main})`,
-    },
+  spanPerfil: {
+    background: `linear-gradient(90deg, transparent, ${theme.palette.primary.main})`,
+  },
 
-    spanProyectos: {
-      background: `linear-gradient(90deg, transparent, ${theme.palette.secondary.main})`,
-    },
+  spanProyectos: {
+    background: `linear-gradient(90deg, transparent, ${theme.palette.secondary.main})`,
+  },
 
-    spanHabilidades: {
-      background: `linear-gradient(90deg, transparent, ${theme.palette.tertiary.main})`,
-    },
+  spanHabilidades: {
+    background: `linear-gradient(90deg, transparent, ${theme.palette.tertiary.main})`,
+  },
 
-    spanContacto: {
-      background: `linear-gradient(90deg, transparent, ${theme.palette.quaternary.main})`,
-    },
+  spanContacto: {
+    background: `linear-gradient(90deg, transparent, ${theme.palette.quaternary.main})`,
+  },
 
   itemIcon: {
-    color: "white",
+    color: theme.palette.darkMode.color,
   },
-  
+
+  itemText: {
+    color: theme.palette.darkMode.color,
+  },
+
 }));
 
 function ResponsiveAppBar() {
@@ -237,14 +241,17 @@ function ResponsiveAppBar() {
               <Link
                 href="#perfil"
                 className={`${classes.linkItem} ${classes.linkItemPerfil}`}
-                sx={{ textDecoration: "none", color: "white" }}
+                sx={{ textDecoration: "none" }}
               >
-                <span className={`${classes.spanPerfil} ${classes.span}`}></span>        
+                <span className={`${classes.spanPerfil} ${classes.span}`}></span>
                 <ListItemIcon className={classes.listItemIcon}>
                   <Person className={classes.itemIcon} />
                 </ListItemIcon>
-                <Typography sx={{fontWeight: "bold"}}>Perfil</Typography>
-              </Link>  
+                <Typography
+                  className={classes.itemText}
+                  sx={{ fontWeight: "bold" }}
+                >Perfil</Typography>
+              </Link>
             </ListItem>
 
             <ListItem
@@ -256,14 +263,17 @@ function ResponsiveAppBar() {
               <Link
                 href="#proyectos"
                 className={`${classes.linkItem} ${classes.linkItemProyectos}`}
-                sx={{ textDecoration: "none", color: "white" }}
+                sx={{ textDecoration: "none" }}
               >
-                <span className={`${classes.spanProyectos} ${classes.span}`}></span>        
+                <span className={`${classes.spanProyectos} ${classes.span}`}></span>
                 <ListItemIcon className={classes.listItemIcon}>
                   <Assignment className={classes.itemIcon} />
                 </ListItemIcon>
-                <Typography sx={{fontWeight: "bold"}}>Proyectos</Typography>
-              </Link>  
+                <Typography
+                  className={classes.itemText}
+                  sx={{ fontWeight: "bold" }}
+                >Proyectos</Typography>
+              </Link>
             </ListItem>
 
             <ListItem
@@ -275,14 +285,17 @@ function ResponsiveAppBar() {
               <Link
                 href="#habilidades"
                 className={`${classes.linkItem} ${classes.linkItemHabilidades}`}
-                sx={{ textDecoration: "none", color: "white" }}
+                sx={{ textDecoration: "none" }}
               >
-                <span className={`${classes.spanHabilidades} ${classes.span}`}></span>        
+                <span className={`${classes.spanHabilidades} ${classes.span}`}></span>
                 <ListItemIcon className={classes.listItemIcon}>
                   <Engineering className={classes.itemIcon} />
                 </ListItemIcon>
-                <Typography sx={{fontWeight: "bold"}}>Habilidades</Typography>
-              </Link>  
+                <Typography
+                  className={classes.itemText}
+                  sx={{ fontWeight: "bold" }}
+                >Habilidades</Typography>
+              </Link>
             </ListItem>
 
             <ListItem
@@ -294,14 +307,17 @@ function ResponsiveAppBar() {
               <Link
                 href="#contacto"
                 className={`${classes.linkItem} ${classes.linkItemContacto}`}
-                sx={{ textDecoration: "none", color: "white" }}
+                sx={{ textDecoration: "none" }}
               >
-                <span className={`${classes.spanContacto} ${classes.span}`}></span>        
+                <span className={`${classes.spanContacto} ${classes.span}`}></span>
                 <ListItemIcon className={classes.listItemIcon}>
                   <Phone className={classes.itemIcon} />
                 </ListItemIcon>
-                <Typography sx={{fontWeight: "bold"}}>Contacto</Typography>
-              </Link>  
+                <Typography
+                  className={classes.itemText}
+                  sx={{ fontWeight: "bold" }}
+                >Contacto</Typography>
+              </Link>
             </ListItem>
           </List>) : ("")
         }

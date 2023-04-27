@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme)=> ({
 
   seccionProyectos: {
     boxShadow: `0px 3px 5px -1px ${theme.palette.secondary.light}`,
+    background: `linear-gradient(180deg, ${theme.palette.secondary.dark} 0%, ${theme.palette.darkMode.background} 35%)`,
   },
 
   tituloSeccionProyectos: {
@@ -55,7 +56,7 @@ const useStyles = makeStyles((theme)=> ({
   },
 
   tituloProyecto: {
-    color: "#fff",
+    color: theme.palette.darkMode.color,
     textShadow: `2px 2px 4px ${theme.palette.secondary.light}`,
     fontSize: "1.12rem",
   },
@@ -103,7 +104,7 @@ const useStyles = makeStyles((theme)=> ({
     },
 
     linkText: {
-      color: "#fff",
+      color: theme.palette.darkMode.color,
     },
 
     linkIcon: {
