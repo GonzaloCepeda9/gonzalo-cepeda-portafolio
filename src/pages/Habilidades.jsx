@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme)=> ({
 
   tituloHabilidad: {
     textAlign: "center",
-    color: "#eaeaea",
+    color: theme.palette.darkMode.color,
     textShadow: "1px 1px 1px #444",
   },
 

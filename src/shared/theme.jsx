@@ -203,7 +203,6 @@ export const THEME = {
         },
         "body1": {
             "fontSize": "0.875rem",
-            "fontWeight": 400,
             "fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
             "lineHeight": "1.46429em",
         },

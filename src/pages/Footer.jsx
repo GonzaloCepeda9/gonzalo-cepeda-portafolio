@@ -77,6 +77,10 @@ const useStyles = makeStyles ((theme) => ({
           color: theme.palette.darkMode.color,
         },
 
+        textContacto: {
+          color: theme.palette.darkMode.color
+        },
+
 }))
 
 function Footer() {
@@ -119,7 +123,13 @@ function Footer() {
               sx={{fontSize: { xs: "3rem", sm: "4rem", md: "5rem" }}}
             />
           </Link>
-          <Typography sx={{fontFamily: "Acme", fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}}}>WhatsApp</Typography>
+          <Typography
+            className={classes.textContacto}
+            sx={{
+              fontFamily: "Acme",
+              fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}
+            }}
+          >WhatsApp</Typography>
         </Box>
         <Box
           className={classes.contenedorContacto}
@@ -137,7 +147,13 @@ function Footer() {
               sx={{fontSize: { xs: "3rem", sm: "5rem", md: "6rem" }}}
             />
           </Link>
-          <Typography sx={{fontFamily: "Acme", fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}}}>LinkedIn</Typography>
+          <Typography
+            className={classes.textContacto}
+            sx={{
+              fontFamily: "Acme",
+              fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}
+            }}
+          >LinkedIn</Typography>
         </Box>
         <Box
           className={classes.contenedorContacto}
@@ -155,7 +171,13 @@ function Footer() {
               sx={{fontSize: { xs: "3rem", sm: "5rem", md: "6rem" }}}
             />
           </Link>
-          <Typography sx={{fontFamily: "Acme", fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}}}>GitHub</Typography>
+          <Typography
+            className={classes.textContacto}
+            sx={{
+              fontFamily: "Acme",
+              fontSize: {xs:"0.9rem", sm: "1rem", marginTop: "1rem"}
+            }}
+          >GitHub</Typography>
         </Box>
       </Box>
     </Box>

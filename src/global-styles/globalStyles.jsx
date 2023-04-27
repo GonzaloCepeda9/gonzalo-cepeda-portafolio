@@ -11,7 +11,7 @@ const globalStyles = makeStyles ((theme) => ({
     fontSize: "1.1rem",
     display: "flex",
     flexDirection: "column",
-    color: "#eaeaea",
+    color: theme.palette.darkMode.color,
     boxShadow: "0px 3px 5px -1px rgba(255, 255, 255, 0.2), 0px 5px 8px 0px rgba(255, 255, 255, 0.14), 0px 1px 14px 0px rgba(255, 255, 255, 0.12)",
     borderRadius: "4px",
     transition: "boxShadow: 300ms cubicBezier(0.4, 0, 0.2, 1) 0ms",
