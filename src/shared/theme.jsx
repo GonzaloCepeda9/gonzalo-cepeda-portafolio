@@ -60,16 +60,16 @@ export const THEME = {
             "dark": "#202020",
             "contrastText": "#fff"
         },
-        "quintary": {
-            "light": "#ffffff",
-            "main": "#f3f3f4",
-            "dark": "#dfdfe2",
+        "darkMode": {
+            "light": "#000",
+            "main": "#000",
+            "dark": "#000",
             "contrastText": "#fff"
         },
-        "error": {
-            "light": "#e57373",
-            "main": "#f44336",
-            "dark": "#d32f2f",
+        "lightMode": {
+            "light": "#fff",
+            "main": "#fff",
+            "dark": "#fff",
             "contrastText": "#fff"
         },
         "grey": {
