@@ -61,16 +61,12 @@ export const THEME = {
             "contrastText": "#fff"
         },
         "darkMode": {
-            "light": "#000",
-            "main": "#000",
-            "dark": "#000",
-            "contrastText": "#fff"
+            "color": "#fff",
+            "background": "#000",
         },
         "lightMode": {
-            "light": "#fff",
-            "main": "#fff",
-            "dark": "#fff",
-            "contrastText": "#fff"
+            "color": "#000",
+            "background": "#fff",
         },
         "grey": {
             "50": "#fafafa",

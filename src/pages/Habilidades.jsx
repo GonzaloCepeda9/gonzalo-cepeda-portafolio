@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme)=> ({
 
   seccionHabilidades: {
     boxShadow: `0px 3px 5px -1px ${theme.palette.tertiary.light}`,
-    background: `linear-gradient(180deg, ${theme.palette.tertiary.dark} 0%, rgba(0,0,0,1) 35%)`,
+    background: `linear-gradient(180deg, ${theme.palette.tertiary.dark} 0%, ${theme.palette.darkMode.background} 35%)`,
   },
 
   tituloSeccionHabilidades: {

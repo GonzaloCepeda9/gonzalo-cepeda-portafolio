@@ -25,7 +25,7 @@ const globalStyles = makeStyles ((theme) => ({
       width: "100%",
       textAlign: "center",
       textTransform: "uppercase",
-      textShadow: "0.05rem 0.05rem 0.1rem #fff",
+      textShadow: `0.05rem 0.05rem 0.1rem ${theme.palette.darkMode.color}`,
     },
 
     subtituloSeccion: {
@@ -81,7 +81,7 @@ const globalStyles = makeStyles ((theme) => ({
       },
 
         BotonTexto: {
-          color: "#fff",
+          color: theme.palette.darkMode.color,
           textTransform: "uppercase",
         },
 

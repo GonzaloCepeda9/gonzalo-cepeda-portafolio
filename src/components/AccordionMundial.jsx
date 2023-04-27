@@ -15,10 +15,10 @@ const useStyles = makeStyles((theme)=> ({
     },
 
     iconAccordion: {
-      color: "#fff",
+      color: theme.palette.darkMode.color,
       backgroundColor: theme.palette.secondary.main,
       borderRadius: "50%",
-      boxShadow: "0 0 .1rem .05rem #000",
+      boxShadow: `0 0 .1rem .05rem ${theme.palette.darkMode.background}`,
     },
 
       contenedorInfoProyecto: {

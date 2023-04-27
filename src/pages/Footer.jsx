@@ -10,7 +10,7 @@ const useStyles = makeStyles ((theme) => ({
 
   seccionFooter: {
     boxShadow: `0px 3px 5px -1px ${theme.palette.quaternary.light}`,
-    background: `linear-gradient(180deg, ${theme.palette.quaternary.dark} 0%, rgba(0,0,0,1) 35%)`,
+    background: `linear-gradient(180deg, ${theme.palette.quaternary.dark} 0%, ${theme.palette.darkMode.background} 35%)`,
     marginBottom: "3rem",
     [theme.breakpoints.down("sm")]: {
       marginBottom: "2rem"
@@ -74,7 +74,7 @@ const useStyles = makeStyles ((theme) => ({
       },
 
         iconContacto: {
-          color: "#fff",
+          color: theme.palette.darkMode.color,
         },
 
 }))

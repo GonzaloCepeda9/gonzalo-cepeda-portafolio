@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme)=> ({
 
   seccionPerfil: {
     boxShadow: `0px 3px 5px -1px ${theme.palette.primary.light}`,
-    background: `linear-gradient(180deg, ${theme.palette.primary.dark} 0%, rgba(0,0,0,1) 35%)`,
+    background: `linear-gradient(180deg, ${theme.palette.primary.dark} 0%, ${theme.palette.darkMode.background} 35%)`,
   },
 
   tituloSeccionPerfil: {
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme)=> ({
     width: "20%",
     minWidth: "200px",
     borderRadius: "50%",
-    backgroundColor: "#000",
+    backgroundColor: theme.palette.darkMode.background,
     boxShadow: `0 .2rem .4rem .01rem ${theme.palette.primary.light}`,
   },
 

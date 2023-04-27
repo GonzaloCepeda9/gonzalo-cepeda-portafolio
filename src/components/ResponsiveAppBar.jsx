@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#000",
+    backgroundColor: theme.palette.darkMode.background,
     borderRadius: "50%",
     cursor: "pointer",
     opacity: 0.8,
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   linkItem: {
-    backgroundColor: "#000",
+    backgroundColor: theme.palette.darkMode.background,
     width: "98%",
     paddingRight: "1rem",
     paddingLeft: "1rem",
@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
       transition: "all .5s ease",
     },
     "&:active": { opacity: 0.6 },
-    color: "#fff",
+    color: theme.palette.darkMode.color,
     position: "relative",
     overflow: "hidden",
     transition: "0.1s",
