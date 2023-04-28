@@ -66,8 +66,8 @@ function Perfil() {
       </Typography>
       <Box
         className={`${globalClasses.contenedorGeneral} animado`}
-        // data-aos="zoom-in"
-        // data-aos-duration="1500"
+        data-aos="zoom-in"
+        data-aos-duration="1500"
       >
         <img
           className={`${classes.imgPerfil} ${classes.myClass} animacion-img`}
@@ -112,8 +112,8 @@ function Perfil() {
       </Typography>
       <Box
         className={`${globalClasses.contenedorGeneral} ${classes.contenedorGeneralFormacion}`}
-        // data-aos="fade-right"
-        // data-aos-duration="1000"
+        data-aos="fade-right"
+        data-aos-duration="1000"
       >
         <Typography sx={{width: "80%"}}> Comencé mi formación realizando trainings de manera autodidacta, y luego realicé la diplomatura en "Programación Web Full Stack" con React JS en la UTN (Universidad Tecnológica Nacional).</Typography>
         <BasicModal />
