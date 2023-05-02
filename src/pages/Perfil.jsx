@@ -3,7 +3,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import BasicModal from "../components/BasicModal";
 import imagenPerfil from "../imagenes/Perfil.png"
-import curriculum from "../archivos/CurriculumGonzalo.pdf";
+import curriculum from "../archivos/GonzaloCepedaCV.pdf";
 import globalStyles from "../global-styles/globalStyles";
 import { makeStyles } from "@mui/styles";
 
