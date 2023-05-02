@@ -74,7 +74,7 @@ function Perfil() {
           src={imagenPerfil}
           alt="Gonzalo Cepeda"
         />
-        <Typography>Soy Gonzalo Cepeda, Desarrollador Web Full Stack.</Typography>
+        <Typography>Soy Gonzalo Cepeda, Programador Web Full Stack.</Typography>
 
         <Box
           className={`
